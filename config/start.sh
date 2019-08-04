@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ls -l /home/
+pwd
 
 source ./.env
 
