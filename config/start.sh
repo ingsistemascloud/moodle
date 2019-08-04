@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-pwd
-
 source ./.env
 
 usermod -u ${USER_ID} apache
