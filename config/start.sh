@@ -7,7 +7,8 @@ groupmod -g ${GROUP_ID} apache
 
 MOODLE_CONFIG=/var/www/html/moodle/config.php
 
-if test -f "$MOODLE_CONFIG"; then
+if test -f "$MOODLE_CONFIG"; then
+
     sed -i "/wwwroot/c\$CFG->wwwroot   = '${MOODLE_URL}';"      $MOODLE_CONFIG
     sed -i "/dbhost/c\$CFG->dbhost    = '${DATABASE_URL}';"     $MOODLE_CONFIG
     sed -i "/dbport/c\  'dbport' => '${DATABASE_PORT}',"        $MOODLE_CONFIG
