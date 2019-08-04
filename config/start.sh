@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ls -l /home/
+
 source ./.env
 
 usermod -u ${USER_ID} apache
