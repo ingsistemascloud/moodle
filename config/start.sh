@@ -16,6 +16,9 @@ if test -f "$MOODLE_CONFIG"; then
     sed -i "/dbname/c\$CFG->dbname    = '${DATABASE_NAME}';"    $MOODLE_CONFIG
     sed -i "/dbuser/c\$CFG->dbuser    = '${DATABASE_USER}';"    $MOODLE_CONFIG
     sed -i "/dbpass/c\$CFG->dbpass    = '${DATABASE_PASS}';"    $MOODLE_CONFIG
+    sed -i "/$CFG->admin/c\$CFG->admin     = 'admin'; \nproxy"  $MOODLE_CONFIG
+    sed -i "/proxy/c\$CFG->sslproxy = ${MOODLE_SSL};"           $MOODLE_CONFIG
+    
 fi
 
 echo ">    successful deployment"
