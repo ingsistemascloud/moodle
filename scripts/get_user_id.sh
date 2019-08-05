@@ -8,9 +8,9 @@ NORMAL=$(tput sgr0)
 
 if [[ $USER_ID = 0 ]]; then
     echo ${RED}">    WARNING: you should not use sudo."${NORMAL}
-    echo ${RED}">    user id  :"$USER_ID${NORMAL}
-    echo ${RED}">    group id :"$GROUP_ID${NORMAL}
+    echo ">    user id  :"$USER_ID
+    echo ">    group id :"$GROUP_ID
 else
-    echo ${GREEN}">    user id  :"$USER_ID${NORMAL}
-    echo ${GREEN}">    group id :"$GROUP_ID${NORMAL}
+    echo ">    user id  :"$USER_ID
+    echo ">    group id :"$GROUP_ID
 fi

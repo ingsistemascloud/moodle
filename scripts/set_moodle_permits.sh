@@ -23,7 +23,7 @@ if test -f ./.env; then
                     find $MOODLE_FOLDER -type f -exec chmod 0644 {} \;
                     echo ">    moodle user:"$USER_NAME" group:"$GROUP_NAME
                     echo '>    moodle folders: 755'
-                    echo '>    moodle folders: 644'
+                    echo '>    moodle files: 644'
                     
                     
                     chown -R $USER_ID:$GROUP_ID $MOODLEDATA_FOLDER
@@ -32,9 +32,9 @@ if test -f ./.env; then
                     find $MOODLEDATA_FOLDER -type f -exec chmod 0600 {} \;
                     echo ">    moodledata user:"$USER_NAME" group:"$GROUP_NAME
                     echo '>    moodledata folders: 700'
-                    echo '>    moodledata folders: 600'
+                    echo '>    moodledata files: 600'
 
-                    echo ${GREEN}">    assigned moodle permissions"${NORMAL}
+                    echo ">    assigned moodle permissions"
                 else
                     echo ${RED}">    ERROR: the folder "$MOODLEDATA_FOLDER" not found."${NORMAL}
                 fi
