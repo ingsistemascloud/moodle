@@ -1,7 +1,7 @@
 version: '3'
 services:
   uvirtual:
-    image: ingsistemascloud/moodle
+    image: uvirtual2021
     volumes:
       - ${MOODLE_FOLDER}:/var/www/html/moodle
       - ${MOODLEDATA_FOLDER}:/var/www/html/moodledata
