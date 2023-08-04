@@ -25,6 +25,7 @@ sed -i "/upload_max_filesize/c\upload_max_filesize = ${MOODLE_MAX_UPLOAD_SIZE}" 
 sed -i "/max_execution_time/c\max_execution_time = 600" $PHP_INI
 sed -i "/max_input_vars/c\max_input_vars = 5000" $PHP_INI
 
+echo "* * * * * /usr/bin/php  /var/www/html/moodle/admin/cli/cron.php 2>> /var/log/httpd/cron/error.log 1>>out.log" | tee -a /var/spool/cron/apache
 
 echo ">    successful deployment"
 echo ">    moodle run in ${MOODLE_NETWORK}:${MOODLE_PORT}"
