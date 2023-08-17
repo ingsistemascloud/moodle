@@ -28,11 +28,6 @@ sed -i "/display_errors/c\display_errors = On" $PHP_INI
 sed -i "/display_startup_errors/c\display_startup_errors = On" $PHP_INI
 sed -i "/;error_log = php_errors.log/c\error_log = \"/var/log/httpd/php.log\"" $PHP_INI
 
-
-
-
-echo "0 5 * * * /usr/bin/php  /var/www/html/moodle/admin/cli/cron.php 2>> /var/log/httpd/cron/error.log 1>>/var/log/httpd/cron/out.log" | tee -a /var/spool/cron/root
-
 echo ">    successful deployment"
 echo ">    moodle run in ${MOODLE_NETWORK}:${MOODLE_PORT}"
 
